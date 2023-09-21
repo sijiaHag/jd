@@ -19,6 +19,7 @@ class TreeUtils<T> {
     this.flat = this.flatTreeData.bind(this);
     this.traverse = this.traverseTree.bind(this);
   }
+  /** 拍平树 */
   flatTreeData(): T[] {
     const result: T[] = [];
     // 0 是栈顶，最先处理
@@ -35,6 +36,7 @@ class TreeUtils<T> {
     return result;
   }
 
+  /** 遍历树 */
   traverseTree(callback: (node: T) => void): void {
     const traverse = (node: T) => {
       // 处理当前节点
@@ -54,6 +56,4 @@ class TreeUtils<T> {
 }
 
 export default TreeUtils;
-
-// 示例用法
 
